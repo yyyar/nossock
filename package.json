@@ -1,0 +1,31 @@
+{
+  "name": "nossock",
+  "description": "Evented TCP/TLS socket with messaging",
+  "version": "0.0.1",
+  "author": {
+      "name": "Yaroslav Pogrebnyak",
+      "url": "http://pogrebnyak.info"
+  },
+  "homepage": "http://github.com/yyyar/nossock",
+  "repository": {
+      "type": "git",
+      "url": ""
+  },
+  "license": "MIT",
+  "engines": {
+      "node": ">= 0.10.12"
+  },
+  "keywords": [
+      "socket",
+      "tls",
+      "tcp",
+      "protocol"
+  ],
+  "main:": "./lib/nossock",
+  "scripts": {
+    "test": "nodeunit tests --reporter verbose"
+  },
+  "readmeFilename": "README.md",
+  "dependencies": {}
+}
+
