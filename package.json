@@ -9,7 +9,7 @@
   "homepage": "http://github.com/yyyar/nossock",
   "repository": {
       "type": "git",
-      "url": ""
+      "url": "git@github.com:yyyar/nossock.git"
   },
   "license": "MIT",
   "engines": {
