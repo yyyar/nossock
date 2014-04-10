@@ -1,33 +1,68 @@
-# Nossock - fast messaging over TCP/TLS
+### Nossock
 
 Nossock is a small lib for implementing lightweight protocols on top of TCP/TLS.
 
-* Fast - serializes messages, but sends Buffer object with as it is with no overhead.
+* Fast - serializes objects to JSON. But for Buffer objects sends it as it is with no overhead.
 * Lower memory consumption - maintains one reusable buffer for parsing incoming messages.
 * TCP & TLS support - easy configurable.
 * Simple: No external dependencies.
 
-## Installation
-$ npm install nossock (not yet in npm)
+#### Installation
+```bash
+$ npm install nossock
+```
 
-## Basic usage
+#### Basic usage
+```javascript
+var nossock = require('nossock');
 
-## Tests
+var options = {
+    host: 'localhost',
+    port: 8797
+};
+
+/* create server */
+    
+nossock.createServer(options, function(socket) {
+    
+    socket.on('hello', function(body) {
+        console.log('On server - hello', body);
+        socket.send('bye', 'cruel world');
+    });
+        
+}).listen(options.port);
+
+
+/* create client */
+    
+nossock.createClient(options, function(socket) {
+    
+    socket.on('bye', function(body) {
+        console.log('On client - bye', body);
+    });
+        
+    socket.send('hello', 'world');
+});
+```
+
+#### Tests
+```bash
 $ sudo npm install nodeunit -g
 $ npm test
+```
 
-## Restrictions
-- Due to message structure, message body size is limited to 4096 Mb. No idea why
+#### Restrictions
+Due to message structure, message body size is limited to `4096 Mb`. No idea why
 you'll want to send such a big message, in any case it worse to split it to
 lots of smaller parts.
 
-## Author
-Yaroslav Pogrebnyak <yyyaroslav@gmail.com>
+#### Author
+* [Yaroslav Pogrebnyak](https://github.com/yyyar/)
 
-## Thanks
+#### Thanks
 * Igor Sosyura (help & bugfix)
 * Evgeniy Agafonov (original idea)
 
-## License
+#### License
 MIT
 
