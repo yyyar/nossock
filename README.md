@@ -1,5 +1,7 @@
 ### Nossock
 
+[![Build Status](https://travis-ci.org/yyyar/nossock.svg?branch=master)](https://travis-ci.org/yyyar/nossock)
+
 Nossock is a small lib for implementing lightweight protocols on top of TCP/TLS.
 
 * Fast - serializes objects to JSON. But for Buffer objects sends it as it is with no overhead.
