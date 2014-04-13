@@ -1,15 +1,19 @@
 {
   "name": "nossock",
-  "description": "Evented TCP/TLS socket with messaging",
+  "description": "Small lib for implementing lightweight protocols on top of TCP/TLS",
   "version": "0.0.2",
   "author": {
       "name": "Yaroslav Pogrebnyak",
-      "url": "http://pogrebnyak.info"
+      "url": "http://pogrebnyak.info",
+      "email": "yyyaroslav@gmail.com"
   },
   "homepage": "http://github.com/yyyar/nossock",
   "repository": {
       "type": "git",
       "url": "git@github.com:yyyar/nossock.git"
+  },
+  "bugs": {
+      "url": "https://github.com/yyyar/nossock/issues"
   },
   "license": "MIT",
   "engines": {

@@ -31,7 +31,8 @@ nossock.createServer(options, function(socket) {
     socket.on('hello', function(body) {
         console.log('On server - hello', body);
         socket.send('bye', 'cruel world');
-    });
+    });,
+"email": "yyyaroslav@gmail.com"
 
 }).listen(options.port);
 
@@ -56,7 +57,7 @@ $ npm test
 
 #### Restrictions
 Due to message structure, message body size is limited to `4096 Mb`. No idea why
-you'll want to send such a big message, in any case it worse to split it to
+you'll want to send such a big message, in any case it worth to split it to
 lots of smaller parts.
 
 #### Author
