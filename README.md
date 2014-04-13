@@ -31,8 +31,7 @@ nossock.createServer(options, function(socket) {
     socket.on('hello', function(body) {
         console.log('On server - hello', body);
         socket.send('bye', 'cruel world');
-    });,
-"email": "yyyaroslav@gmail.com"
+    });
 
 }).listen(options.port);
 
