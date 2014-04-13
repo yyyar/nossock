@@ -14,35 +14,36 @@ Nossock is a small lib for implementing lightweight protocols on top of TCP/TLS.
 $ npm install nossock
 ```
 
-#### Basic usage
+#### Basic usage, TCP client/server
 ```javascript
 var nossock = require('nossock');
 
 var options = {
+    type: 'tcp',
     host: 'localhost',
     port: 8797
 };
 
 /* create server */
-    
+
 nossock.createServer(options, function(socket) {
-    
+
     socket.on('hello', function(body) {
         console.log('On server - hello', body);
         socket.send('bye', 'cruel world');
     });
-        
+
 }).listen(options.port);
 
 
 /* create client */
-    
+
 nossock.createClient(options, function(socket) {
-    
+
     socket.on('bye', function(body) {
         console.log('On client - bye', body);
     });
-        
+
     socket.send('hello', 'world');
 });
 ```

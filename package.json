@@ -1,7 +1,7 @@
 {
   "name": "nossock",
   "description": "Evented TCP/TLS socket with messaging",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": {
       "name": "Yaroslav Pogrebnyak",
       "url": "http://pogrebnyak.info"
