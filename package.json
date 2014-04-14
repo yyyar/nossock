@@ -1,7 +1,7 @@
 {
   "name": "nossock",
   "description": "Small lib for implementing lightweight protocols on top of TCP/TLS",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": {
       "name": "Yaroslav Pogrebnyak",
       "url": "http://pogrebnyak.info",
@@ -25,7 +25,7 @@
       "tcp",
       "protocol"
   ],
-  "main:": "./lib/nossock",
+  "main": "./lib/nossock",
   "scripts": {
     "test": "nodeunit tests --reporter verbose"
   },
