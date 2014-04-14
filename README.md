@@ -18,27 +18,21 @@ $ npm install nossock
 ```javascript
 var nossock = require('nossock');
 
-var options = {
-    type: 'tcp',
-    host: 'localhost',
-    port: 8797
-};
-
 /* create server */
 
-nossock.createServer(options, function(socket) {
+nossock.createServer('tcp', {}, function(socket) {
 
     socket.on('hello', function(body) {
         console.log('On server - hello', body);
         socket.send('bye', 'cruel world');
     });
 
-}).listen(options.port);
+}).listen(8797);
 
 
 /* create client */
 
-nossock.createClient(options, function(socket) {
+nossock.createClient('tcp', {port: 8797}, function(socket) {
 
     socket.on('bye', function(body) {
         console.log('On client - bye', body);
@@ -47,6 +41,28 @@ nossock.createClient(options, function(socket) {
     socket.send('hello', 'world');
 });
 ```
+
+For more examples, see [tests](https://github.com/yyyar/nossock/tree/master/tests)
+
+#### API
+
+##### `nossock.createServer( [type], [options], callback )`
+ * `type` : 'tcp' (default) | 'tls'
+ * `options` : options object for underlying tcp or tls `createServer` function
+ * `callback` : connection listener
+
+##### `nossock.createClient( [type], [options], callback )`
+ * `type`: 'tcp' (default) | 'tls'
+ * `options` : options object for underlying tcp or tls `connect` function
+ * `callback` : connection listener
+
+##### `Socket (passed to callback)`
+ * `socket.send(name, obj)` - send message with name `name` and object `obj`. obj will be serialized in JSON. If obj is instance of Buffer, it won't be serialized and will be sent as it is, with no extra overhead.
+ * `socket.on(name, callback)` - subscribe on `name` event. Once got, `callback` will be called with received object as the only parameter. `name` could be anything except of the reserved ones (like `error` or `end`).
+
+##### Events forwarded from underlying socket
+`connect`, `end`, `timeout`, `error`, `close`
+
 
 #### Tests
 ```bash
