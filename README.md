@@ -4,17 +4,17 @@
 
 Nossock is a small lib for implementing lightweight protocols on top of TCP/TLS.
 
-* Fast - serializes objects to JSON. But for Buffer objects sends it as it is with no overhead.
-* Lower memory consumption - maintains one reusable buffer for parsing incoming messages.
-* TCP & TLS support - easy configurable.
-* Simple: No external dependencies.
+* Fast: serializes objects to JSON. But for Buffer objects sends it as it is with no overhead
+* Lower memory consumption: maintains one reusable buffer for parsing incoming messages
+* TCP & TLS support: easy configurable
+* Simple: No external dependencies
 
 #### Installation
 ```bash
 $ npm install nossock
 ```
 
-#### TCP client/server example
+#### TCP example
 ```javascript
 var nossock = require('nossock');
 
@@ -42,7 +42,7 @@ nossock.createClient('tcp', {port: 8797}, function(socket) {
 });
 ```
 
-#### TLS client/server example
+#### TLS example
 ```javascript
 var fs = require('fs'),
     nossock = require('nossock');
