@@ -61,7 +61,7 @@ var serverOpts = {
 nossock.createServer('tls', serverOpts, function(socket) {
 
     console.log('Got connection from', socket.socket.remoteAddress);
-    console.log('Certificate CN', socket.socket.getPeerCertificate().subject.CN);
+    console.log('Certificate', socket.socket.getPeerCertificate());
 
     socket.on('hello', function(body) {
         console.log('On server - hello', body);

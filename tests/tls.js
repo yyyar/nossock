@@ -25,6 +25,7 @@ module.exports = {
 
         /* create server */
         var server = nossock.createServer('tls', serverOpts, function(socket) {
+
             socket.on('hello', function(body) {
                 test.equal(body, 'world', 'Server got what client sent');
                 socket.send('bye', 'cruel world');
