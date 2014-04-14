@@ -1,6 +1,6 @@
 ### Nossock
 
-[![Build Status](https://travis-ci.org/yyyar/nossock.svg?branch=master)](https://travis-ci.org/yyyar/nossock)
+[![Build Status](https://travis-ci.org/yyyar/nossock.svg?branch=master)](https://travis-ci.org/yyyar/nossock) [![NPM version](https://badge.fury.io/js/nossock.svg)](http://badge.fury.io/js/nossock)
 
 Nossock is a small lib for implementing lightweight protocols on top of TCP/TLS.
 
