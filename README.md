@@ -98,11 +98,17 @@ For more examples, see [tests](https://github.com/yyyar/nossock/tree/master/test
 #### API
 
 ##### `nossock.createServer( [type], [options], callback )`
+Returns:
+ * `server` : server instance
+Arguments:
  * `type` : 'tcp' (default) | 'tls'
  * `options` : options object for underlying tcp or tls `createServer` function
  * `callback` : connection listener
 
 ##### `nossock.createClient( [type], [options], callback )`
+Returns:
+ * `socket` : Nossock instance
+Arguments:
  * `type`: 'tcp' (default) | 'tls'
  * `options` : options object for underlying tcp or tls `connect` function
  * `callback` : connection listener
