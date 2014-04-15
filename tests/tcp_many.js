@@ -14,6 +14,7 @@ module.exports = {
         var server = nossock.createServer(function(socket) {
             for (var i = 0; i<N; i++) {
                 socket.send('i', {i:i});
+            console.log(socket.bytesWritten);
             }
             socket.end();
             server.close();
