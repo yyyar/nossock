@@ -2,12 +2,12 @@
 
 [![Build Status](https://travis-ci.org/yyyar/nossock.svg?branch=master)](https://travis-ci.org/yyyar/nossock) [![NPM version](https://badge.fury.io/js/nossock.svg)](http://badge.fury.io/js/nossock)
 
-Nossock is a small lib for implementing lightweight protocols on top of TCP/TLS.
+Nossock is a small lib for implementing lightweight protocols on top of TCP & TLS.
 
-* Fast: serializes objects to JSON. But for Buffer objects sends it as it is with no overhead
-* Lower memory consumption: maintains one reusable buffer for parsing incoming messages
-* TCP & TLS support: easy configurable
-* Simple: No external dependencies
+* **Fast:** serializes messages to JSON, but sends Buffer objects as it is with no overhead
+* **Lower memory consumption:** one reusable buffer for parsing incoming messages
+* **TCP and TLS**: easy configurable
+* **Simple**: No external dependencies
 
 #### Installation
 ```bash
@@ -100,16 +100,18 @@ For more examples, see [tests](https://github.com/yyyar/nossock/tree/master/test
 ##### `nossock.createServer( [type], [options], callback )`
 Returns:
  * `server` : server instance
+
 Arguments:
- * `type` : 'tcp' (default) | 'tls'
+ * `type` : `'tcp'` (default) | `'tls'`
  * `options` : options object for underlying tcp or tls `createServer` function
  * `callback` : connection listener
 
 ##### `nossock.createClient( [type], [options], callback )`
 Returns:
  * `socket` : Nossock instance
+ * 
 Arguments:
- * `type`: 'tcp' (default) | 'tls'
+ * `type`: `'tcp'` (default) | `'tls'`
  * `options` : options object for underlying tcp or tls `connect` function
  * `callback` : connection listener
 
