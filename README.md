@@ -120,8 +120,15 @@ Arguments:
  * `socket.on(name, callback)` - subscribe on `name` event. Once got, `callback` will be called with received object as the only parameter. `name` could be anything except of the reserved ones (like `error` or `end`).
  * `socket.socket` - underlying socket. Could be used to retreive some useful info such as `socket.socket.remoteAddress`' or `socket.socket.getPeerCertificate()` (for TLS connections).
 
+##### Handling any message
+```javascript
+socket.on('message', name, body) {
+    console.log(name, body);
+});
+```
+
 ##### Events forwarded from underlying socket
-`connect`, `end`, `timeout`, `error`, `close`
+`connect`, `end`, `timeout`, `error`, `close`, `data`
 
 
 #### Tests
