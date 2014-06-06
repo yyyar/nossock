@@ -7,7 +7,7 @@ Nossock is a small lib for implementing lightweight protocols on top of TCP & TL
 * **Fast:** serializes messages to JSON, but sends Buffer objects as it is with no overhead
 * **Lower memory consumption:** one reusable buffer for parsing incoming messages
 * **TCP and TLS**: easy configurable
-* **Simple**: No external dependencies
+* **Req-Res**: Supports request-response messages
 
 #### Installation
 ```bash

@@ -1,35 +1,37 @@
 {
   "name": "nossock",
   "description": "Small lib for implementing lightweight protocols on top of TCP/TLS",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "author": {
-      "name": "Yaroslav Pogrebnyak",
-      "url": "http://pogrebnyak.info",
-      "email": "yyyaroslav@gmail.com"
+    "name": "Yaroslav Pogrebnyak",
+    "url": "http://pogrebnyak.info",
+    "email": "yyyaroslav@gmail.com"
   },
   "homepage": "http://github.com/yyyar/nossock",
   "repository": {
-      "type": "git",
-      "url": "git@github.com:yyyar/nossock.git"
+    "type": "git",
+    "url": "git@github.com:yyyar/nossock.git"
   },
   "bugs": {
-      "url": "https://github.com/yyyar/nossock/issues"
+    "url": "https://github.com/yyyar/nossock/issues"
   },
   "license": "MIT",
   "engines": {
-      "node": ">= 0.10.12"
+    "node": ">= 0.10.12"
   },
   "keywords": [
-      "socket",
-      "tls",
-      "tcp",
-      "protocol"
+    "socket",
+    "tls",
+    "tcp",
+    "protocol"
   ],
   "main": "./lib/nossock",
   "scripts": {
     "test": "nodeunit tests --reporter verbose"
   },
   "readmeFilename": "README.md",
-  "dependencies": {}
+  "dependencies": {
+    "lodash": "^2.4.1",
+    "shortid": "^2.0.0"
+  }
 }
-
