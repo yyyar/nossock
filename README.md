@@ -92,8 +92,12 @@ nossock.createClient('tls', clientOpts, function(socket) {
 });
 ```
 
-
 For more examples, see [tests](https://github.com/yyyar/nossock/tree/master/tests)
+
+
+#### Message Format
+![Screenshot](http://s4.postimg.org/f03qnf7f1/ffff.jpg "Screenshot")
+
 
 #### API
 
