@@ -1,7 +1,7 @@
 {
   "name": "nossock",
   "description": "Small lib for implementing lightweight protocols on top of TCP/TLS",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "author": {
     "name": "Yaroslav Pogrebnyak",
     "url": "http://pogrebnyak.info",
@@ -17,7 +17,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">= 0.10.12"
+    "node": ">= 5.10.0"
   },
   "keywords": [
     "socket",
@@ -31,7 +31,7 @@
   },
   "readmeFilename": "README.md",
   "dependencies": {
-    "lodash": "^2.4.1",
-    "shortid": "^2.0.0"
+    "lodash": "^4.17.21",
+    "nanoid": "^3.1.30"
   }
 }
